@@ -1,0 +1,23 @@
+{
+  "name": "eBTB",
+  "short_name": "eBTB",
+
+  "icons": [
+    {
+	  "src":"images/icons/ico-main.png?v=0.1",
+	  "sizes":"192x192"
+	},
+	{
+	  "src":"images/icons/ico-main-large.png?v=0.1",
+	  "sizes":"512x512"
+	}
+  ],
+
+  "id": "/?utm_source=pwa",
+  "start_url": "/?utm_source=pwa",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#3D7289",
+  "description": "Oglądaj kanały Bombaskiej Telewizji Bożej gdziekolwiek jesteś !"
+}

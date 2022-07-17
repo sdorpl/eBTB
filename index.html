@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eBTB - Bombaska Telewizja Boża - Oglądaj online!</title>
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+  <link href="https://vjs.zencdn.net/7.18.1/video-js.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika">
+  <link rel="icon" href="images/favicon.ico?v0.1" type="image/x-icon" />
+
+  <!-- CODELAB: Add link rel manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- CODELAB: Add iOS meta tags and icons -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="eBTB">
+<link rel="apple-touch-icon" href="images/icons/ico-main-large.png">
+
+  <!-- CODELAB: Add description here -->
+  <meta name="description" content="Oglądaj kanały Bombaskiej Telewizji Bożej gdziekolwiek jesteś !">
+
+  <!-- CODELAB: Add meta theme-color -->
+  <meta name="theme-color" content="#3D7289" />
+
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <a class="logo_url" href="/">
+	  <img class="logo_img" src="images/logo.webp">
+	  <span class="logo_text">Bombaska Telewizja Boża</span>
+	  </a>
+    </div>
+	<div class="menu">
+		<button id="butInstall" aria-label="Install" hidden></button>
+		<button id="butLight" aria-label="Light" hidden></button>
+		<button id="butDark" aria-label="Dark"></button>
+	</div>
+  </header>
+
+<main class="main">
+
+    <div id="btnContainer" class="btnContainer hidden">
+		<button id="butClean" class="btns" aria-label="Clean">
+			Wyczyść
+		</button>
+	</div>
+
+    <div id="weather-template" class="weather-card">
+		<div class="ebtb-player">
+			<video-js id=vid1 width=600 height=300 class="vjs-default-skin vjs-16-9" liveui="true" controls autoplay="true" responsive="true">
+			</video-js>
+		</div>
+		<hr>
+		<div class="channel-list">
+			<center>
+			<a onclick="exCalc.pch(0)" href="#BTB"><img src="https://bombas.ml/BTB/images/logo_BTB.webp" alt="Bombaska Telewizja Boża" width="90" height="90"></img></a>
+			<a onclick="exCalc.pch(1)" href="#BTB2"><img src="https://bombas.ml/BTB/images/logo_BTB2.webp" alt="BTB 2" width="90" height="90"></img></a>
+			<a onclick="exCalc.pch(2)" href="#BTBInfo"><img src="https://bombas.ml/BTB/images/logo_BTBInfo.webp" alt="BTB Info" width="90" height="90"></img></a>
+			<a onclick="exCalc.pch(3)" href="#BTBMusic"><img src="https://bombas.ml/BTB/images/logo_BTBMusic.webp" alt="BTB Music" width="90" height="90"></img></a>
+			</center>
+		</div>
+
+    </div>
+</main>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-58243912-8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-58243912-8');
+</script>
+
+<script src="https://vjs.zencdn.net/7.18.1/video.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@videojs/http-streaming@2.14.2/dist/videojs-http-streaming.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script src="scripts/app.js"></script>
+<!-- CODELAB: Add the install script here -->
+<script src="scripts/install.js"></script>
+  <script>
+    // CODELAB: Register service worker.
+	if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+  });
+}
+  </script>
+
+
+</body>
+</html>
